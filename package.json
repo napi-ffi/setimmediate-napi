@@ -1,6 +1,9 @@
 {
   "author": "Anna Henningsen <anna@addaleax.net>",
-  "name": "setimmediate-napi",
+  "maintainers": [
+    "Gilson Urbano <hello@gilsonurbano.com>"
+  ],
+  "name": "@napi-ffi/setimmediate-napi",
   "license": "MIT",
   "description": "`setImmediate()` for N-API code",
   "keywords": [
@@ -11,17 +14,25 @@
   "version": "1.0.6",
   "repository": {
     "type": "git",
-    "url": "git://github.com/node-ffi-napi/setimmediate-napi.git"
+    "url": "git://github.com/napi-ffi/setimmediate-napi.git"
   },
   "main": "get-paths.js",
+  "files": [
+    "get-paths.js",
+    "include/"
+  ],
   "scripts": {
-    "test": "reverse-test weak-napi"
+    "test": "node-gyp rebuild --directory . && node test/test.js",
+    "build": "node-gyp rebuild",
+    "clean": "node-gyp clean",
+    "install": "echo 'No build step required for installation'"
   },
   "dependencies": {
-    "get-symbol-from-current-process-h": "^1.0.1",
-    "get-uv-event-loop-napi-h": "^1.0.5"
+    "@napi-ffi/get-symbol-from-current-process-h": "^1.0.4",
+    "@napi-ffi/get-uv-event-loop-napi-h": "^1.0.6"
   },
   "devDependencies": {
-    "reverse-test": "^1.1.0"
+    "node-addon-api": "^8.2.1",
+    "node-gyp": "^11.5.0"
   }
 }

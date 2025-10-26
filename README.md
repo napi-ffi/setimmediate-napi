@@ -1,14 +1,12 @@
-setimmediate-napi
-=================
+@napi-ffi/setimmediate-napi
+===========================
 ### `setImmediate()` for N-API code
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/node-ffi-napi/setimmediate-napi.svg)](https://greenkeeper.io/)
+[![CI](https://github.com/napi-ffi/setimmediate-napi/actions/workflows/ci.yml/badge.svg)](https://github.com/napi-ffi/setimmediate-napi/actions/workflows/ci.yml)
+[![NPM Version](https://img.shields.io/npm/v/@napi-ffi/setimmediate-napi.svg?style=flat)](https://npmjs.org/package/@napi-ffi/setimmediate-napi)
+[![NPM Downloads](https://img.shields.io/npm/dm/@napi-ffi/setimmediate-napi.svg?style=flat)](https://npmjs.org/package/@napi-ffi/setimmediate-napi)
 
-[![NPM Version](https://img.shields.io/npm/v/setimmediate-napi.svg?style=flat)](https://npmjs.org/package/setimmediate-napi)
-[![NPM Downloads](https://img.shields.io/npm/dm/setimmediate-napi.svg?style=flat)](https://npmjs.org/package/setimmediate-napi)
-[![Build Status](https://travis-ci.org/node-ffi-napi/setimmediate-napi.svg?style=flat&branch=master)](https://travis-ci.org/node-ffi-napi/setimmediate-napi?branch=master)
-[![Coverage Status](https://coveralls.io/repos/node-ffi-napi/setimmediate-napi/badge.svg?branch=master)](https://coveralls.io/r/node-ffi-napi/setimmediate-napi?branch=master)
-[![Dependency Status](https://david-dm.org/node-ffi-napi/setimmediate-napi.svg?style=flat)](https://david-dm.org/node-ffi-napi/setimmediate-napi)
+> Forked from [node-ffi-napi/setimmediate-napi](https://github.com/node-ffi-napi/setimmediate-napi) to maintain and modernize the project while preserving the original APIs.
 
 Installation
 ------------
@@ -16,7 +14,7 @@ Installation
 Install with `npm`:
 
 ``` bash
-$ npm install setimmediate-napi
+$ npm install @napi-ffi/setimmediate-napi
 ```
 
 Usage
@@ -26,10 +24,10 @@ In your `binding.gyp`:
 
 ```python
     'include_dirs': ["<!@(node -p \"require('node-addon-api').include\")",
-                     "<!@(node -p \"require('setimmediate-napi').include\")"],
+                     "<!@(node -p \"require('@napi-ffi/setimmediate-napi').include\")"],
 ```
 
-(Just have `"<!@(node -p \"require('setimmediate-napi').include\")"` somewhere in that list, ok?)
+(Just have `"<!@(node -p \"require('@napi-ffi/setimmediate-napi').include\")"` somewhere in that list, ok?)
 
 In your C++ code:
 
