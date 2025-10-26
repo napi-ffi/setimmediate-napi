@@ -7,7 +7,7 @@
       ],
       "include_dirs": [
         "include",
-        "<!@(node -p \"require('node-addon-api').include_dir\")",
+        "<!(node -p \"require('node-addon-api').include_dir\")",
         "<!@(node -p \"require('@napi-ffi/get-symbol-from-current-process-h').include\")",
         "<!@(node -p \"require('@napi-ffi/get-uv-event-loop-napi-h').include\")"
       ],
